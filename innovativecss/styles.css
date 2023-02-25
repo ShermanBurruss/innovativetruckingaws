@@ -146,6 +146,12 @@ p{
   line-height: 1.5;
 }
 
+.manage-image{
+  width: 20%;
+  border-radius: 25%;
+  margin: 20px;
+}
+
 .recognition-image{
   width: 30%;
   border-radius: 10%;
@@ -156,6 +162,7 @@ p{
   font-size: 2rem;
   line-height: 1.5;
 }
+
 
 #press{
   background-color: #ef7182
