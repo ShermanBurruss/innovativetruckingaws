@@ -43,6 +43,15 @@ p{
   color:#fff;
 }
 
+.colored-bga{
+  background-color: #93bbe4;
+  color:#fff;
+}
+
+.colored-bgb{
+  background-color: #27313c;
+  color:#fff;
+}
 .white-bg{
     background-color: #fff;
 }
