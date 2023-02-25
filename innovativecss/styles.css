@@ -102,6 +102,11 @@ p{
   right: 25%;
 }
 
+.bio-image{
+  position:relative;
+  width: 20%;
+  right: 25%;
+}
 /* features */
 
 #features{
