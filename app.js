@@ -15,7 +15,9 @@ app.get("/cleantruck", function(req,res){
     res.render("cleanform", {begDay:begDay, endDay:endDay} );
 })
 
-
+app.listen(443, function(req, res){
+    console.log("Listening on port 3000.");
+    })
 
 
 
@@ -36,6 +38,3 @@ function getSaturday(d) {
   
 
 
-app.listen(80, function(req, res){
-console.log("Listening on port 3000.");
-})
