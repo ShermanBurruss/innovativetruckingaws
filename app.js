@@ -31,7 +31,7 @@ app.get("/cleanform", function(req,res){
     res.render("cleanform", {begDay:begDay, endDay:endDay} );
 })
 
-app.listen(8080, function(req, res){
+app.listen(80, function(req, res){
     console.log("Listening on port 3000.");
     })
 
