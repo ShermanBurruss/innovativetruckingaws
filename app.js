@@ -11,6 +11,10 @@ var endDay = getSaturday(new Date());
 begDay = begDay.toDateString();
 endDay = endDay.toDateString();
 
+app.get("/", function(req,res){
+    res.render("index", {} );
+})
+
 app.get("/cleantruck", function(req,res){
     res.render("cleanform", {begDay:begDay, endDay:endDay} );
 })
