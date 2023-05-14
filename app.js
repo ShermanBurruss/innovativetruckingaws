@@ -9,7 +9,7 @@ app.listen( 80 , function(req, res){
 
 http.createServer(app).listen(80)
 https.createServer(options, app).listen(443)
-    
+
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 
@@ -38,9 +38,9 @@ app.get("/cleanform", function(req,res){
     res.render("cleanform", {begDay:begDay, endDay:endDay} );
 })
 
-app.listen( 80 , function(req, res){
-    console.log("Listening on port 3000.");
-    })
+// app.listen( 80 , function(req, res){
+//     console.log("Listening on port 3000.");
+//     })
 
 
 
