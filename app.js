@@ -12,19 +12,19 @@ begDay = begDay.toDateString();
 endDay = endDay.toDateString();
 
 app.get("/", function(req,res){
-    res.render("index", {} );
+    res.render("index");
 })
 
 app.get("/contact", function(req,res){
-    res.render("contact", {} );
+    res.render("contact");
 })
 
 app.get("/about", function(req,res){
-    res.render("about", {} );
+    res.render("about");
 })
 
 app.get("/gallery", function(req,res){
-    res.render("gallery", {} );
+    res.render("gallery");
 })
 
 app.get("/cleanform", function(req,res){
