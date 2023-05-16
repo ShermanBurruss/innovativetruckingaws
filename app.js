@@ -3,12 +3,7 @@ const bodyParser = require("body-parser");
 const https = require('https')
 const http = require('http')
 const app = express();
-app.listen( 80 , function(req, res){
-    console.log("Listening on port 3000.");
-    })
 
-// http.createServer(app).listen(80)
-// https.createServer(options, app).listen(443)
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
@@ -16,32 +11,17 @@ app.use(express.static(__dirname + '/public'));
 var begDay = getSunday(new Date());
 var endDay = getSaturday(new Date());
 begDay = begDay.toDateString();
+console.log(begDay);
 endDay = endDay.toDateString();
+console.log(endDay);
 
-app.get("/", function(req,res){
-    res.render("index");
-})
-
-app.get("/contact", function(req,res){
-    res.render("contact");
-})
-
-app.get("/about", function(req,res){
-    res.render("about");
-})
-
-app.get("/gallery", function(req,res){
-    res.render("gallery");
-})
+app.listen(80,function(){
+    console.log("Listening on port 3000.");
+    })
 
 app.get("/cleanform", function(req,res){
-    res.render("cleanform", {begDay:begDay, endDay:endDay} );
+    res.render('cleanform', {begDay:begDay, endDay:endDay} );
 })
-
-// app.listen( 80 , function(req, res){
-//     console.log("Listening on port 3000.");
-//     })
-
 
 
 
