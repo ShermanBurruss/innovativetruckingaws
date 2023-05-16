@@ -3,12 +3,12 @@ const bodyParser = require("body-parser");
 const https = require('https')
 const http = require('http')
 const app = express();
-app.listen( 80 , function(req, res){
+app.listen( 3002 , function(req, res){
     console.log("Listening on port 3000.");
     })
 
-http.createServer(app).listen(80)
-https.createServer(options, app).listen(443)
+// http.createServer(app).listen(80)
+// https.createServer(options, app).listen(443)
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
