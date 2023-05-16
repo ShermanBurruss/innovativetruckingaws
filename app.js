@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const https = require('https')
 const http = require('http')
 const app = express();
-app.listen( 3002 , function(req, res){
+app.listen( 80 , function(req, res){
     console.log("Listening on port 3000.");
     })
 
