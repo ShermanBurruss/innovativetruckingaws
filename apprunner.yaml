@@ -1,0 +1,9 @@
+version: 1.0
+runtime: javascript16 
+build:
+  commands:
+    build:
+      - pip install pipenv
+      - pipenv install 
+run: 
+  command: itsweb app.js
