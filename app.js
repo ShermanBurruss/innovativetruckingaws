@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const http = require("http");
+const ejs = require("ejs");
 
 http.createServer(function (req, res) {
   }).listen(8080);
@@ -18,10 +19,6 @@ console.log(begDay);
 endDay = endDay.toDateString();
 console.log(endDay);
 
-
-// app.listen(8080, function(){
-//     console.log("Listening on port 3000.");
-//     })
 
 app.get("/", function(req,res){
     res.render('index');
