@@ -15,9 +15,11 @@ console.log(begDay);
 endDay = endDay.toDateString();
 console.log(endDay);
 
-app.listen(80,function(){
-    console.log("Listening on port 3000.");
-    })
+http.createServer(app).listen(80);
+
+// app.listen(80, function(){
+//     console.log("Listening on port 3000.");
+//     })
 
 app.get("/", function(req,res){
     res.render('index');
