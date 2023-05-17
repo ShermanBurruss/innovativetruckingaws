@@ -1,9 +1,8 @@
 version: 1.0
-runtime: Nodejs 16
+runtime: nodejs12
 build:
-  commands:
+  commands:    
     build:
-      - pip install pipenv
-      - pipenv install 
-run: 
-  command: itsweb app.js
+      - npm install --production                                  
+run:                              
+  command: node app.js
