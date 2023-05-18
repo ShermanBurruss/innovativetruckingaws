@@ -25,7 +25,7 @@ console.log(endDay);
 
 
 app.get("/", function(req,res){
-    res.render('index');
+    res.render('clearform');
 })
 
 app.get("/cleanform", function(req,res){
