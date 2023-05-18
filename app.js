@@ -4,9 +4,13 @@ const app = express();
 const http = require("http");
 const ejs = require("ejs");
 
-http.createServer(function (req, res) {
-  }).listen(8080);
-  console.log('Server running');
+// http.createServer(function (req, res) {
+//   }).listen(3000);
+//   console.log('Server running');
+
+app.listen(8080, function(req, res){
+    console.log("Hello");
+})
 
 
 app.set("view engine", "ejs");
