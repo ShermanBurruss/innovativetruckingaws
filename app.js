@@ -25,7 +25,7 @@ console.log(endDay);
 
 
 app.get("/", function(req,res){
-    res.render('cleanform');
+    res.render('cleanform', {begDay:begDay, endDay:endDay});
 })
 
 app.get("/cleanform", function(req,res){
