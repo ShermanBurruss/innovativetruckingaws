@@ -26,21 +26,52 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
       
         <!-- Personal CSS -->
-        <link rel="stylesheet" href= "/public/innovativecss/styles.css" type="text/css">
+        <link rel="stylesheet" href= "innovativecss/styles.css" type="text/css">
       </head> 
 <body>
 
-  <section id = "title" class="colored-bg">
+  <section id = "Title" class="formTitle colored-bg">
     <div>
-      <h1 class ="form-title">Truck Cleaning Page</h1>
+      <h1 class ="formHead">Truck Cleaning Page</h1>
       <h2>Week of:</h2>
       <h2> <%= begDay %> to <%= endDay %> </h2>
     </div>
   </section>  
 
-  <section id="form" class="colored-bg">
-    <div class="embed-responsive embed-responsive-1by50">
-      <iframe src="https://forms.monday.com/forms/embed/7ad79b39e1796fc5269843b453ccc10b?r=use1" width="650" height="500" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
+  <section id="main" class="colored-bg">
+    <div class = "container formDiv listDiv">
+      <div class = "container truckList">
+        <div class = "listHead" ><h1> Current Week</h1></div>
+        <div class = "listBody" >
+          <ul class = "truckInfo">
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+          </ul>
+        </div>
+        
+      </div>
+      <div class="container truckList">
+        <div class = "listHead"><h1> Next Week</h1></div>
+        <div class = "listBody" >
+          <ul class = "truckInfo">
+            <li >Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+            <li>Temp Truck Info</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container formDiv">
+      <iframe src="https://forms.monday.com/forms/embed/7ad79b39e1796fc5269843b453ccc10b?r=use1" width="100%" height="100%" style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
     </div>
   </section>
 
@@ -54,6 +85,7 @@
   </footer>
 
 <script type="text/javascript" src="index.js" charset="utf-8"></script>
+
 </body>
 
 </html>

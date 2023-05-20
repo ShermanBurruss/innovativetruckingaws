@@ -20,14 +20,6 @@ p{
   font-size: 3.5rem;
 }
 
-.form-title {
-  font-family: "Montserrat";
-  font-weight: bolder;
-  line-height: 1.5;
-  font-size: 3.5rem;
-  text-align: center;
-}
-
 .section-title{
   font-size: 3rem;
   line-height: 1.5;
@@ -181,20 +173,6 @@ p{
   width: 15%;
 }
 
-/* Pricing Section */
-#pricing{
-  padding: 100px;
-}
-
-.pricing-col{
-  padding: 3% 2%;
-}
-
-.price-text{
-  font-size: 3rem;
-  line-height: 1.5;
-}
-
 @media (max-width: 1028px){
 
   #title{
@@ -249,6 +227,11 @@ p{
   position: relative;
   padding: 1% 1%;
 }
+
+#main{
+  display:flex;
+  gap:px;
+}
 .social-media{
   position: relative;
   width: 25%
@@ -258,4 +241,61 @@ p{
   position: relative;
 font-size: 2rem;
   margin: 20px 10px;
+}
+
+/* cleanform */
+
+.formDiv{
+  display: flex;
+  width:50%;
+  height:1200px;
+}
+
+.formHead {
+  font-family: "Montserrat";
+  font-weight: bolder;
+  line-height: 1.5;
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.formTitle{
+  color: lightgray;
+}
+
+.listBody{
+  display: flex;
+  flex-direction: column;
+  border: black solid 2px;
+  border-radius: 10px;
+  color: lightgray;
+  height: auto;
+  margin-top: 1rem;
+  
+}
+
+.listDiv{
+  margin-top: 2.25rem;
+  display:flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.listHead{
+  border: black solid 2px;
+  border-radius: 10px;
+  color: lightgray;
+  height: 25%;
+  margin-top: 1rem;
+}
+
+.truckInfo{
+  list-style: none;
+}
+
+.truckList{
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  margin: 1rem;
 }

@@ -8,7 +8,7 @@ const ejs = require("ejs");
 //   }).listen(3000);
 //   console.log('Server running');
 
-app.listen(8080, function(req, res){
+app.listen(3000, function(req, res){
     console.log("Hello");
 })
 
@@ -25,7 +25,7 @@ console.log(endDay);
 
 
 app.get("/", function(req,res){
-    res.render('cleanform', {begDay:begDay, endDay:endDay});
+    res.render('index');
 })
 
 app.get("/cleanform", function(req,res){
