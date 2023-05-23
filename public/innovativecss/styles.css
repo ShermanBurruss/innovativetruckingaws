@@ -296,6 +296,6 @@ font-size: 2rem;
 .truckList{
   display: flex;
   flex-direction: column;
-  height: 250px;
+  height: 900px;
   margin: 1rem;
 }
