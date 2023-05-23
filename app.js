@@ -9,7 +9,7 @@ const ejs = require("ejs");
 //   }).listen(3000);
 //   console.log('Server running');
 
-app.listen(3000, function(req, res){
+app.listen(8080, function(req, res){
     console.log("Hello");
 })
 
