@@ -316,16 +316,18 @@ font-size: 2rem;
   margin: 1rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
 
   /* Adjustments for smaller screens */
 
-  .header-logo {
-      width: 10%; /* Adjust the width of the header logo */
+  #main{
+    display:flex;
+    gap:px;
+    flex-direction: column;
   }
 
-  .formTitle {
-      flex-direction: column; /* Stack the items vertically for small screens */
+  .header-logo {
+      width: 20%; /* Adjust the width of the header logo */
   }
 
   .listDiv {
