@@ -316,7 +316,7 @@ font-size: 2rem;
   margin: 1rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
 
   /* Adjustments for smaller screens */
 
