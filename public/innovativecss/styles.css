@@ -316,12 +316,12 @@ font-size: 2rem;
   margin: 1rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
 
   /* Adjustments for smaller screens */
 
   .header-logo {
-      width: 30%; /* Adjust the width of the header logo */
+      width: 10%; /* Adjust the width of the header logo */
   }
 
   .formTitle {
