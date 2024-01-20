@@ -12,7 +12,7 @@ const app = express();
 
 dotenv.config(); // Load environment variables from .env file
 
-app.listen(3000, function(req, res){
+app.listen(8080, function(req, res){
     console.log("Hello");
 })
 
