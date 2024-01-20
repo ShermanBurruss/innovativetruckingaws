@@ -1,15 +1,18 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
-const app = express();
 const https = require("https");
 const ejs = require("ejs");
+const AWS = require('aws-sdk');
+const xlsx = require('xlsx');
+const dotenv = require('dotenv');
 
-// http.createServer(function (req, res) {
-//   }).listen(3000);
-//   console.log('Server running');
+const app = express();
 
-app.listen(8080, function(req, res){
+
+dotenv.config(); // Load environment variables from .env file
+
+app.listen(3000, function(req, res){
     console.log("Hello");
 })
 
@@ -24,11 +27,36 @@ console.log(begDay);
 endDay = endDay.toDateString();
 console.log(endDay);
 
+const s3 = new AWS.S3({
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    region: process.env.AWS_REGION,
+});
+const bucketName = 'trip-info-s3';
+
 
 app.get("/", function(req,res){
 
     res.render('index');
 })
+
+app.get('/performance', async (req, res) => {
+    try {
+      // Fetch data from the first Excel file
+      const onTimeKey = 'processed-OnTime.xlsx';
+      const onTimeData = await fetchDataFromS3(onTimeKey);
+  
+      // Fetch data from the second Excel file
+      const scoresKey = 'processed-scores.xlsx';
+      const scoresData = await fetchDataFromS3(scoresKey);
+  
+      // Render the 'performance' view with the retrieved data
+      res.render('performance', { onTime: onTimeData, scores: scoresData, begDay:begDay, endDay:endDay});
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
 
 app.get("/cleanform", function(req,res){
     
@@ -50,6 +78,22 @@ function getSaturday(d) {
     diff = d.getDate() + (6-day);
     return new Date(d.setDate(diff));
 }
+
+async function fetchDataFromS3(key) {
+    const params = {
+      Bucket: bucketName,
+      Key: key,
+    };
+  
+    const excelData = await s3.getObject(params).promise();
+    const workbook = xlsx.read(excelData.Body, { type: 'buffer' });
+  
+    // Assuming your data is in the first sheet of the workbook
+    const sheetName = workbook.SheetNames[0];
+    const sheetData = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName]);
+    console.log(sheetData);
+    return sheetData;
+  }
 
 // // "\"topics\""
 // async function getTruckList(){

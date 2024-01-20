@@ -13,6 +13,12 @@ p{
   color: #8f8f8f;
 }
 
+tr{
+  border-width:3px;
+  border-color: #93bbe4;
+  border-style: solid;
+}
+
 .main-title{
   font-family: "Montserrat";
   font-weight: bolder;
@@ -83,7 +89,7 @@ p{
 }
 
 .nav-logo{
-  width: 30%;
+  width: 15%;
 }
 
 /* Download Buttons */
@@ -173,6 +179,10 @@ p{
   width: 15%;
 }
 
+.header-logo{
+  width:10%
+}
+
 @media (max-width: 1028px){
 
   #title{
@@ -257,10 +267,13 @@ font-size: 2rem;
   line-height: 1.5;
   font-size: 3.5rem;
   text-align: center;
+  width: 100%;
 }
 
 .formTitle{
+  display:flex;
   color: lightgray;
+  vertical-align: middle;
 }
 
 .listBody{
@@ -279,6 +292,9 @@ font-size: 2rem;
   display:flex;
   flex-direction: column;
   gap: 1rem;
+  border-style: outset;
+  background-color: #485563;
+  border-radius: 15px;
 }
 
 .listHead{
@@ -298,4 +314,23 @@ font-size: 2rem;
   flex-direction: column;
   height: 900px;
   margin: 1rem;
+}
+
+@media (max-width: 767px) {
+
+  /* Adjustments for smaller screens */
+
+  .header-logo {
+      width: 30%; /* Adjust the width of the header logo */
+  }
+
+  .formTitle {
+      flex-direction: column; /* Stack the items vertically for small screens */
+  }
+
+  .listDiv {
+      margin-top: 1rem;
+  }
+
+  /* Add more adjustments as needed */
 }
